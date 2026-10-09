@@ -1,9 +1,9 @@
 import type { Task } from '../models/task.interface';
 
-/*
-export const tasks: Task[] = [];
-*/
 
+export const tasks: Task[] = [];
+
+/*
 export const tasks: Task[] = [
     {
         id: 'task-001',
@@ -40,4 +40,12 @@ export const tasks: Task[] = [
         createdAt: '2026-09-26T16:00:00.000Z',
         updatedAt: '2026-09-26T16:00:00.000Z',
     },
+    {
+        id: 'task-006',
+        title: 'Documentar actividad mas reciente',
+        status: 'pending',
+        createdAt: '2026-09-26T16:00:00.000Z',
+        updatedAt: '2026-09-26T16:00:00.000Z',
+    },
 ];
+*/

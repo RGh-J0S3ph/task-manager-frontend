@@ -1,9 +1,9 @@
 import type { Task } from '../models/task.interface';
 
-
-export const tasks: Task[] = [];
-
 /*
+export const tasks: Task[] = [];
+*/
+
 export const tasks: Task[] = [
     {
         id: 'task-001',
@@ -48,4 +48,3 @@ export const tasks: Task[] = [
         updatedAt: '2026-09-26T16:00:00.000Z',
     },
 ];
-*/

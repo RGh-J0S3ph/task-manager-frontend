@@ -2,10 +2,7 @@ services:
 - type: web
 name: task-manager-frontend-reemplaza
 runtime: static
-buildCommand: >-
-corepack enable &&
-pnpm install --frozen-lockfile &&
-pnpm verify
+buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
 staticPublishPath: ./dist
 autoDeployTrigger: commit
 envVars:

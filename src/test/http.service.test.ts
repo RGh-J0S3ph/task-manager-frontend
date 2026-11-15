@@ -10,6 +10,7 @@ import {
     httpRequest,
     setUnauthorizedHandler,
 } from '../services/http.service';
+import { listTasks } from '../services/task.api.service';
 const fetchMock = vi.fn<typeof fetch>();
 describe('http.service', () => {
     beforeEach(() => {
@@ -17,6 +18,32 @@ describe('http.service', () => {
     });
     afterEach(() => {
         vi.unstubAllGlobals();
+    });
+    it('consulta las tareas bajo /api incluso si la base ya incluye /api', async () => {
+        fetchMock.mockResolvedValue(
+            new Response(
+                JSON.stringify({ data: [], meta: {} }),
+                {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                },
+            ),
+        );
+        await listTasks(
+            {
+                page: 1,
+                limit: 5,
+                sortBy: 'updatedAt',
+                order: 'desc',
+            },
+            'token-demo',
+        );
+        const [url] = fetchMock.mock.calls[0];
+        expect(url).toBe(
+            '/api/tasks?page=1&limit=5&sortBy=updatedAt&order=desc',
+        );
     });
     it('envía Accept y Bearer', async () => {
         fetchMock.mockResolvedValue(

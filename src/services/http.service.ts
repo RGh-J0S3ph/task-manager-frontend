@@ -93,8 +93,12 @@ export async function httpRequest<T>(
         );
     }
     try {
+        const apiBaseUrl = API_URL.endsWith('/api') &&
+            path.startsWith('/api/')
+            ? API_URL.slice(0, -4)
+            : API_URL;
         const response = await fetch(
-            `${API_URL}${path}`,
+            `${apiBaseUrl}${path}`,
             {
                 ...options,
                 headers,

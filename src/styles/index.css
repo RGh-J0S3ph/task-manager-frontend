@@ -612,4 +612,80 @@ input[aria-invalid='true'] {
     .task-detail__actions button {
         width: 100%;
     }
+
+    .app-navigation-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .session-summary {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .session-summary span {
+        color: #455568;
+        font-size: 0.9rem;
+    }
+
+    .auth-panel {
+        width: min(100%, 560px);
+        margin-inline: auto;
+    }
+
+    .auth-form {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.25rem;
+    }
+
+    .form-field {
+        display: grid;
+        gap: 0.35rem;
+    }
+
+    .form-field label {
+        font-weight: 700;
+    }
+
+    .app-navigation-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .session-summary {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .session-summary span {
+        color: #455568;
+        font-size: 0.9rem;
+    }
+
+    .auth-panel {
+        width: min(100%, 560px);
+        margin-inline: auto;
+    }
+
+    .auth-form {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.25rem;
+    }
+
+    .form-field {
+        display: grid;
+        gap: 0.35rem;
+    }
+
+    .form-field label {
+        font-weight: 700;
+    }
 }
